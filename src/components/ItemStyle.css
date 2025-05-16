@@ -1,0 +1,120 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  max-width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fffdfd;
+}
+
+.taskControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.taskCheckbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #4caf50;
+  cursor: pointer;
+}
+
+.taskText {
+  font-size: 1rem;
+  flex-grow: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.dltButton {
+  all: unset;
+  margin-left: 10px;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dltButton .deleteBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background-color: red;
+}
+
+.dltButton.deleting .deleteBar {
+  animation: fillBar 0.8s linear forwards;
+}
+
+@keyframes fillBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.trashIcon {
+  color: #b00020;
+  font-size: 1.1em;
+}
+
+.dltButton:hover .trashIcon {
+  color: #ff6b6b;
+  transition: color 0.2s ease;
+}
+
+.editButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.editButton:hover {
+  background-color: #f0f0f0;
+}
+
+.pencilIcon {
+  color: #2a7de1;
+  font-size: 1.1em;
+}
+
+.taskDate {
+  font-size: 0.8rem;
+  color: #444;
+  margin-top: 4px;
+  margin-left: 30px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkIcon {
+  color: #31a357;
+}
+
+.createdIcon {
+  color: #ff9800;
+}
+
+.timingIcon {
+  color: #5c6bc0;
+}

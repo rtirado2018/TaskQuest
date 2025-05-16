@@ -1,0 +1,53 @@
+form{
+    
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+  
+    max-width: 700px;
+    height: 30vh;
+    margin: 20px auto;
+}
+
+.textArea{
+    padding: 25px 20px;
+    width:450px;
+    resize:vertical;
+    height:60em;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    border: none;
+
+}
+
+
+.addNote{
+     font-size: 1.2em; 
+     font-weight: 600; 
+     margin-left: 0; 
+  
+}
+
+
+.addTask{
+    background-color:#1a3947;
+    margin-top: 5px;
+    font-size: 18px;
+    color: #eeebeb;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 8px;
+}
+
+.addTask:hover{
+    background-color:#173542;
+}
+.addTask:active{
+    background-color:rgb(24, 48, 48)
+}
+

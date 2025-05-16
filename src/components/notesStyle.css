@@ -1,0 +1,379 @@
+.main {
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 2em;
+
+}
+
+.homeButton {
+  margin-top: 0;
+  align-self: flex-end;
+  border: none;
+  background: none;
+  margin-right: 3em;
+  padding: 10px 20px;
+  font-size: 1.6em;
+  color: #2c6378;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.homeIcon {
+  color: #ffb73d;
+  font-size: 1.2em;
+  margin-right: 0.8em;
+
+}
+
+.homeButton:hover {
+  color: #255264;
+}
+
+.homeButton:hover .homeIcon {
+  color: #eead3d;
+}
+
+.homeButton:active {
+  color: #244857;
+}
+
+.homeButton:active .homeIcon {
+  color: #e2a53a;
+}
+
+
+.notesContainer {
+  background-color: #e2e7e6;
+  padding: 0.3em 10em;
+  padding-bottom: 5em;
+  border-radius: 8px;
+  margin-top: 1em;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+h2 {
+  color: #2c6378;
+  font-size: 2em;
+  text-align: center;
+  padding: 1em, 6em;
+  margin-bottom: 0.2em;
+
+}
+
+
+.addNoteButton {
+  margin-top: 0;
+  align-self: flex-end;
+  border: none;
+  background: none;
+  margin-right: 5em;
+  margin-bottom: 2em;
+  padding: 10px 20px;
+  font-size: 1.4em;
+  color: #2c6378;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+
+.addNoteIcon {
+  color: #ffb73d;
+  font-size: 1.2em;
+  margin-right: 0.6em;
+  transition: color 0.2s ease;
+}
+
+.addNoteButton:hover {
+  color: #255264;
+}
+
+.addNoteButton:hover .addNoteIcon {
+  color: #eead3d;
+
+}
+
+.addNoteButton:active {
+  color: #244857;
+}
+
+.addNoteButton:active .addNoteIcon {
+  color: #e2a53a;
+
+
+}
+
+
+.noteItem {
+  margin-bottom: 2em;
+  background-color: #f1f2f5;
+  padding: 2em 3em;
+  border-radius: 8px;
+}
+
+.noteEditArea {
+  width: 100%;
+  min-height: 200px;
+  /* más espacio mínimo */
+  max-height: none;
+  /* sin límite superior */
+  height: auto;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  resize: vertical;
+  /* puedes quitar si no quieres que el usuario cambie tamaño */
+  overflow-y: auto;
+  white-space: pre-wrap;
+  /* para que respete saltos de línea */
+}
+
+.noteItem.expanded .noteEditArea {
+  min-height: 50em;
+}
+
+
+
+.noteEditArea:hover {
+  border-color: #ffb347;
+}
+
+.noteEditArea:focus {
+  outline: none;
+  border-color: #ffa500;
+  background-color: #fff8dc;
+}
+
+.notesList {
+  width: 80%;
+}
+
+
+.btnContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 30em;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.expandButton {
+  color: #2c6378;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 2em;
+  align-self: flex-start;
+
+}
+
+
+
+.expandIcon {
+  margin-right: 0.8em;
+  color: inherit;
+}
+
+.expandButton:hover {
+  color: #255264;
+
+}
+
+.expandButton:active {
+  color: #244857;
+
+}
+
+
+
+.delButton {
+  all: unset;
+  /* Esto resetea TODO: fondo, borde, padding, etc. */
+  margin-left: 20px;
+  margin-bottom: 2em;
+  align-self: flex-end;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 15px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  color: #444;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.delButton:hover,
+.delButton:hover .trashIcon {
+
+  color: #f5b0b0;
+  transition: color 0.2s ease;
+}
+
+.delButton:active,
+.delButton:active .trashIcon {
+
+  color: #fc0e0e;
+  transition: color 0.2s ease;
+}
+
+.trashIcon{
+  margin-right:0.8em ;
+}
+
+.delButton {
+  position: relative;
+  overflow: hidden;
+}
+
+.delButton::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 0%;
+  background-color: red;
+  transition: none;
+}
+
+.delButton.deleting::after {
+  animation: holdToDelete 0.8s linear forwards;
+}
+
+@keyframes holdToDelete {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.editButton {
+  margin-right: 20px;
+  padding: 5px 10px;
+  flex-shrink: 0;
+  /* No se hacen más pequeños */
+  white-space: nowrap;
+  /* Que el texto no salte de línea */
+}
+
+.noteFormArea {
+  padding: 25px 20px;
+  width: 50em;
+  resize: vertical;
+  height: 60em;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  border: none;
+
+}
+
+.saveButton,
+.cnclButton {
+  background-color: #1a3947;
+  margin-top: 5px;
+  font-size: 18px;
+  color: #eeebeb;
+  padding: 10px 35px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 4em;
+}
+
+@media (max-width: 768px) {
+  .main{
+    align-items: center;
+  }
+  .homeButton , .homeIcon{
+    font-size: 1.5em;
+    
+    
+  }
+  .notesContainer {
+    padding: 1em;
+    width: 90vw;
+  }
+
+  .notesList {
+    width: 100%;
+    font-size: 0.9em;
+    
+    
+  }
+
+  .noteItem.expanded .noteEditArea {
+    font-size: 1.2em;
+    min-height: 50vh;
+  }
+
+  .btnContainer {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .addNoteButton {
+    margin-right: 0; /* para que no se salga por la derecha */
+    align-self: center;
+  }
+
+  .homeButton {
+    margin-right: 0;
+    align-self: center;
+  }
+  .noteForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+
+  .noteFormArea {
+    width: 90%;
+    height: auto;
+    min-height: 200px;
+    font-size: 14px;
+  }
+
+
+  .formButtons {
+    display: flex;
+    flex-direction: row;  /* en fila */
+    align-items: center;  /* centra verticalmente */
+    justify-content: center; /* centra horizontalmente */
+  
+    width: 100%;
+    gap: 3.5em; /* espacio entre botones */
+  }
+  
+  .saveButton, .cnclButton {
+    width: auto;  /* quita el 70% para que no se estiren */
+    min-width: 100px; /* asegura un tamaño mínimo bonito */
+    padding: 10px 20px;
+    text-align: center !important;  /* asegura que el texto esté centrado */
+    margin-right: 0; /* elimina el desplazamiento a la derecha */
+
+  }
+}

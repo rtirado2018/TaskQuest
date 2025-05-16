@@ -1,0 +1,109 @@
+.listaTareas {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: flex-start;
+  width: 40vw;
+  max-width: 100%;
+  padding: 20px;
+  list-style: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-wrap: break-word;
+  max-height: 80vh;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+
+h3 {
+  font-size: 1.7em;
+  color: #2c6378;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 1em;
+  text-align: center;
+  cursor: pointer; /* Para indicar que se puede hacer clic */
+  transition: color 0.3s ease;
+}
+
+
+  .toDo{
+    background-color:#dbe8ee;
+  }
+
+  .done{
+    background-color: #e4f0f5;
+    
+  }
+
+  @media (max-width: 768px) {
+    .mainContainer {
+      padding: 1rem;
+      align-items: stretch;
+    }
+  
+    .logo {
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+    }
+  
+    header > img {
+      margin-left: 0;
+    }
+    
+    h3 {
+      font-size: 1.3em;
+      text-align: center;
+      margin-left: 0;
+    }
+    
+    h3:active{
+      color: #ffb73d;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      gap: 1em;
+      margin: 0 auto;
+    }
+  
+    .openModalButton {
+      margin-right: 0;
+      margin-bottom: 1em;
+      align-self: center;
+    }
+  
+    .listContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+    }
+  
+    .listaTareas {
+      width: 90vw;
+      padding: 15px;
+      margin-bottom: 2em;
+    }
+  
+    .listaTareas h3 {
+      font-size: 1.4em;
+    }
+    .modalContent {
+      width: 95%;
+      max-width: none;
+      padding: 1rem;
+    }
+  
+    .cancelButton {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+  

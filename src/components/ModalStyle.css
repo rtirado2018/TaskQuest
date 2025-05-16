@@ -1,0 +1,119 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 71, 48, 0.205);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: rgb(226, 231, 230);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  height: 80%;
+  max-width: 500px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  margin: 0 !important;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.textArea {
+  padding: 25px 20px;
+  width: 100%;
+  max-width: 450px;
+  resize: vertical;
+  height: 10em;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  border: none;
+
+}
+
+.openModalButton {
+  margin-top: 10px;
+  align-self: flex-end;
+  border: none;
+  background: none;
+  margin-right: 15em;
+  padding: 10px 20px;
+  font-size: 1.2em;
+
+  color: #2c6378;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.openModalButton:hover {
+
+  color: #255264;
+
+}
+
+.openModalButton:active {
+
+  color: #244857;
+
+}
+
+
+.cancelButton {
+  color: #eeebeb;
+  font-size: 1em;
+  font-weight: 900;
+  margin-top: 10px;
+  align-self: flex-end;
+  padding: 8px 13px;
+  background-color: #444;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.cancelButton:hover {
+  background-color: rgb(49, 53, 52);
+  color: #dadddc;
+}
+
+.cancelButton:active {
+  background-color: rgb(21, 22, 22);
+  color: #cac9c9;
+}
+
+@media (max-width: 600px) {
+
+
+  .modalContent {
+
+    width: 95% !important;
+    max-width: 90vw !important;
+    height: 50vh;
+    padding: 1rem;
+
+  }
+
+  .textArea {
+    width: 100% !important;
+    height: 8em;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 1em;
+    resize: vertical;
+  }
+
+  .cancelButton {
+    align-self: flex-end;
+    margin: 0;
+  }
+
+}
